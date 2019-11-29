@@ -1,19 +1,21 @@
 #!groovy
 
 pipeline {
-    agent {
-        none
+  agent {
+    kubernetes {
+      yamlFile 'kubernetes-pod.yaml'
     }
-    options {
-        disableConcurrentBuilds()
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '2'))
-    }
-    stages {
-       stage('Deploy image to DEMO Environment'){
-            steps{
-                echo 'Deploying image...'
-            }
+  }
+  stages {
+    stage('Run maven') {
+      steps {
+        container('maven') {
+          sh 'mvn -version'
         }
-
+        container('busybox') {
+          sh '/bin/busybox'
+        }
+      }
     }
+  }
 }
