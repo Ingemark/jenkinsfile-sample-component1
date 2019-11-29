@@ -11,7 +11,7 @@ pipeline {
     stages {
        stage('Deploy image to DEMO Environment'){
             steps{
-                echo 'Deploying image to ECS on AWS...'
+                echo 'Deploying image...'
             }
         }
 
