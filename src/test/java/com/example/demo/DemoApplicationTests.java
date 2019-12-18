@@ -13,5 +13,6 @@ class DemoApplicationTests {
     @Test
     void f1test() {
         DemoApplication.f1("0");
+        System.out.println("H");
     }
 }
