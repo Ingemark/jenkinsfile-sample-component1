@@ -10,4 +10,8 @@ public class DemoApplication {
             SpringApplication.run(DemoApplication.class, args);
 	}
 
+    public static String f1(String p1) {
+        return p1 + "A";
+    }
+
 }

@@ -10,4 +10,8 @@ class DemoApplicationTests {
 	void contextLoads() {
 	}
 
+    @Test
+    void f1test() {
+        DemoApplication.f1("0");
+    }
 }
