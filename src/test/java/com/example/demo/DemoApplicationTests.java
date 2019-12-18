@@ -7,10 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 
 	@Test
+        @SuppressWarnings("squid:S2699")
 	void contextLoads() {
 	}
 
     @Test
+    @SuppressWarnings("squid:S2699")
     void f1test() {
         DemoApplication.f1("0");
     }
