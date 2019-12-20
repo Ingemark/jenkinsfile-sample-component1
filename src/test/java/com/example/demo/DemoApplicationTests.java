@@ -15,5 +15,7 @@ class DemoApplicationTests {
     @SuppressWarnings("squid:S2699")
     void f1test() {
         DemoApplication.f1("0");
+        System.out.println("H");
+        System.out.println("H");
     }
 }
