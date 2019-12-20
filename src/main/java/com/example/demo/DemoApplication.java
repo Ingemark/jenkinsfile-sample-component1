@@ -12,6 +12,7 @@ public class DemoApplication {
 
     public static String f1(String p1) {
         String password = "3459823745";
+        String password2 = "3459823745";
         return p1 + "A";
     }
 
