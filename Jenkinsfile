@@ -1,21 +1,12 @@
 #!groovy
 
 pipeline {
-  agent {
-    kubernetes {
-      yamlFile 'kubernetes-pod.yaml'
-    }
-  }
-  stages {
-    stage('Run maven') {
-      steps {
-        container('maven') {
-          sh 'mvn -version'
+    agent any
+    stages {
+        stage('Run world') {
+            steps {
+                sh 'echo Hello, world!'
+            }
         }
-        container('busybox') {
-          sh '/bin/busybox'
-        }
-      }
     }
-  }
 }
